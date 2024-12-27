@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+
+    <style>
+        .items{
+            display: grid;
+            grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));
+            grid-gap:20px;
+            grid-auto-columns: minmax(50px, auto);
+            grid-template-rows: minmax(100px,auto);
+            background-color: lightcoral;
+            border: 3px blueviolet solid;
+            border-radius: 3px;
+            column-gap: 120px;
+            row-gap: 120px;
+        }
+        #item-1{
+            grid-column-start: 1;
+            grid-column-end: 5;
+        }
+        .item-1-container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        .nested-item{
+            border: 3px greenyellow solid;
+            border-radius: 3px;
+            background-color: orchid;
+        }
+    </style>
+</head>
+<body>
+    <div class="items">
+       <div class="items item-1-container" id="item-1">
+        <div class="nested-item">Dabba ma dabba 1</div>
+        <div class="nested-item">Dabba ma dabba 2</div>
+        <div class="nested-item">Dabba ma dabba 3</div>
+       </div>
+       <div class="items" id="item-2">Dabba 2</div>
+       <div class="items">Dabba 3</div>
+       <div class="items">Dabba 4</div>
+       <div class="items">Dabba 5</div>
+    </div>
+</body>
+</html>
